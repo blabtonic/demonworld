@@ -57,7 +57,7 @@ def checkVase(chooseVase):
 	else:
 		print("Inside there is a map that shows you to a cave")
 
-	def displayStorythree():
+def displayStorythree():
 		print("you follow the maps path")
 		print("traveling through the land ")
 displayStoryone()
