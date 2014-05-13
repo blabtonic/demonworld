@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import time
+import sys
 
 def displayStoryone():
     print("you are in a land full of demons. In front of you")
@@ -53,13 +54,83 @@ def checkVase(chooseVase):
 	if chooseVase == str(badVase):
 		print("A Demon hopes out and kills you")
 		print()
-		print("Game Over. Do you wish to play again? ")
+		print("Game Over. Do you wish to play again?")
+		sys.exit(0)
 	else:
 		print("Inside there is a map that shows you to a cave")
+		print()
 
 def displayStorythree():
-		print("you follow the maps path")
-		print("traveling through the land ")
+	print("you follow the map's path")
+	print("traveling through the land")
+	print("you then come to a fork in the road")
+	print("one path leads left the other leads right")
+	print()
+
+def choosePath():
+	path = ""
+	while path != "LEFT" and path != "RIGHT":
+		print("Which path do you choose LEFT or RIGHT")
+		path = input()
+
+		return path
+
+def checkPath(choosePath):
+	print("after choosing your path")
+	time.sleep(2)
+	print("you run to the path that you have chosen")
+	time.sleep(2)
+	print()
+
+	badPath = "RIGHT"
+
+	if choosePath == str(badPath):
+		print("You run right into a demon mouth")
+		print()
+		print("Game Over. Do you wish to play again?")
+		sys.exit(0)
+	else:
+		print()
+		print("you have reached a clearing!!")	
+		print()
+
+
+def displayStoryfour():
+	print("After the path finishes")
+	print("you see two caves")
+	print("one covered in gold")
+	print("the other covered in silver")
+	print()
+
+def chooseCave():
+	cave = ""
+	while cave != "Gold" and cave != "Silver":
+		print("Which cave do you choose Gold or Silver")
+		path = input()
+
+		return cave
+
+def checkCave(chooseCave):
+	print("you journey into the cave")
+	time.sleep(2)
+	print("there is a demon in here!!")
+	time.sleep(2)
+	print("it comes forward")
+	time.sleep(2)
+	print()
+
+	badCave = "Gold"
+
+	if chooseCave == str(badCave):
+		print("the demon swallows you whole")
+		print()
+		print("Game Over. Do you wish to play again?")
+		sys.exit(0)
+	else:
+		print()
+		print("CONGRATS YOU GET ALL OF THE TREASURE")
+		print()
+
 displayStoryone()
 
 weaponNumber = chooseWeapon()
@@ -73,3 +144,13 @@ vaseNumber = chooseVase()
 checkVase(vaseNumber)
 
 displayStorythree()
+
+pathNumber = choosePath()
+
+checkPath(pathNumber)
+
+displayStoryfour()
+
+caveNumber = chooseCave()
+
+checkCave(caveNumber)
